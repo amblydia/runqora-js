@@ -1,0 +1,22 @@
+{
+  "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
+  "extends": ["ultracite/biome/core"],
+  "overrides": [
+    {
+      // Each entry point of the package re-exports its public API.
+      "includes": ["src/index.ts", "src/*/index.ts"],
+      "linter": {
+        "rules": { "performance": { "noBarrelFile": "off" } }
+      }
+    },
+    {
+      // Micro-optimisation rules add noise in tests without any benefit.
+      "includes": ["**/*.test.ts", "test/**"],
+      "linter": {
+        "rules": {
+          "performance": { "noAwaitInLoops": "off", "useTopLevelRegex": "off" }
+        }
+      }
+    }
+  ]
+}
