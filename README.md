@@ -1,11 +1,11 @@
-# @runqora/sdk
+# runqora
 
 Everything your server needs to work with [Runqora](https://runqora.dev):
 verify the API keys your customers send, send and receive webhooks, report
 cron heartbeats, and let Runqora manage your application's users.
 
 ```bash
-bun add @runqora/sdk
+bun add runqora
 ```
 
 It has no dependencies and uses only `fetch` and Web Crypto, so it runs in
@@ -15,7 +15,7 @@ auth secret must never reach a browser.
 ## API keys, webhooks and cron monitors
 
 ```ts
-import { Runqora } from "@runqora/sdk";
+import { Runqora } from "runqora";
 
 const runqora = new Runqora({ apiKey: process.env.RUNQORA_API_KEY! });
 
@@ -27,7 +27,7 @@ await runqora.monitoring.heartbeat(process.env.NIGHTLY_EXPORT_MONITOR_ID!);
 Receiving webhooks Runqora sends to your application:
 
 ```ts
-import { verifyWebhook } from "@runqora/sdk";
+import { verifyWebhook } from "runqora";
 
 export async function POST(request: Request) {
   const event = await verifyWebhook({
@@ -42,14 +42,14 @@ export async function POST(request: Request) {
 
 ## Users, with Better Auth
 
-`@runqora/sdk/better-auth` is a Better Auth plugin (Better Auth 1.6.13 or
+`runqora/better-auth` is a Better Auth plugin (Better Auth 1.6.13 or
 later). Your users stay in your database: the plugin answers signed requests
 from Runqora with data it reads through Better Auth's own adapter, so custom
 table and field names keep working.
 
 ```ts
 import { betterAuth } from "better-auth";
-import { runqora } from "@runqora/sdk/better-auth";
+import { runqora } from "runqora/better-auth";
 
 export const auth = betterAuth({
   // ...your existing configuration
@@ -64,10 +64,10 @@ and showing roles need Better Auth's `admin` plugin; organizations need its
 
 ## Users, with any other auth system
 
-`@runqora/sdk/auth` turns a few functions into a handler you mount at a route:
+`runqora/auth` turns a few functions into a handler you mount at a route:
 
 ```ts
-import { createAuthBridge } from "@runqora/sdk/auth";
+import { createAuthBridge } from "runqora/auth";
 
 const bridge = createAuthBridge({
   basePath: "/api/runqora",

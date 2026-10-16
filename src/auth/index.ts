@@ -1,12 +1,12 @@
 /**
- * @runqora/sdk/auth
+ * runqora/auth
  *
  * Connect any authentication system to Runqora: describe how to read your
  * users (and, optionally, sessions and organizations) and mount the returned
  * handler at a route in your application.
  *
  * ```ts
- * import { createAuthBridge } from "@runqora/sdk/auth";
+ * import { createAuthBridge } from "runqora/auth";
  *
  * const bridge = createAuthBridge({
  *   basePath: "/api/runqora",

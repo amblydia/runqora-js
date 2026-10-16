@@ -1,6 +1,6 @@
 # Security Policy
 
-`@runqora/sdk` runs inside other people's servers, and the Better Auth plugin
+`runqora` runs inside other people's servers, and the Better Auth plugin
 can read and manage their users. Security reports are taken seriously and
 handled first.
 
@@ -25,5 +25,5 @@ the issue before publishing any details.
 
 ## Supported versions
 
-Fixes are released for the latest version of `@runqora/sdk`. Problems in the
+Fixes are released for the latest version of `runqora`. Problems in the
 hosted service at runqora.dev can be reported the same way.

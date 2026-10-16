@@ -1,5 +1,5 @@
 {
-  "name": "@runqora/sdk",
+  "name": "runqora",
   "version": "0.1.0",
   "description": "Runqora for your server: verify API keys, send and receive webhooks, report cron heartbeats, and connect your users through Better Auth or any auth system.",
   "keywords": [

@@ -51,7 +51,7 @@ console.log(`${manifest.name} -> dist`);
 /**
  * The package has no `dependencies`: anything a bundle still imports must be
  * a peer the application installs itself, such as `better-auth` for
- * `@runqora/sdk/better-auth`.
+ * `runqora/better-auth`.
  */
 async function assertOnlyPeerImports(): Promise<void> {
   const peers = Object.keys(manifest.peerDependencies ?? {});

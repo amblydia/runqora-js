@@ -1,6 +1,6 @@
 # Contributing to runqora-js
 
-Thanks for helping. This repository is `@runqora/sdk`, the package customers
+Thanks for helping. This repository is `runqora`, the package customers
 install to use [Runqora](https://runqora.dev) from their servers. Bug reports,
 fixes, documentation and ideas are all welcome.
 
@@ -30,17 +30,17 @@ bun run build     # bundle into dist
 The package has no runtime dependencies and uses only `fetch` and Web Crypto,
 so it runs in Node.js, Bun, Deno and edge runtimes. Keep it that way: a change
 that needs a dependency should be discussed first. `better-auth` is an
-optional peer, used only by `@runqora/sdk/better-auth`; the build fails if a
+optional peer, used only by `runqora/better-auth`; the build fails if a
 bundle imports anything that is not a declared peer.
 
 The layout:
 
 | Path | Entry point | What it is |
 | --- | --- | --- |
-| `src/index.ts` | `@runqora/sdk` | The API client and webhook verification |
-| `src/auth/index.ts` | `@runqora/sdk/auth` | The auth bridge for any auth system |
-| `src/better-auth/index.ts` | `@runqora/sdk/better-auth` | The Better Auth plugin |
-| `src/auth/protocol.ts` | `@runqora/sdk/protocol` | The signed request protocol both sides share |
+| `src/index.ts` | `runqora` | The API client and webhook verification |
+| `src/auth/index.ts` | `runqora/auth` | The auth bridge for any auth system |
+| `src/better-auth/index.ts` | `runqora/better-auth` | The Better Auth plugin |
+| `src/auth/protocol.ts` | `runqora/protocol` | The signed request protocol both sides share |
 
 Changes to `src/auth/protocol.ts` affect Runqora's servers too, and versions
 of this package already installed in applications must keep working, so a

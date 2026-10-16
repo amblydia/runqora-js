@@ -1,5 +1,5 @@
 /**
- * @runqora/sdk/better-auth
+ * runqora/better-auth
  *
  * A Better Auth plugin that lets Runqora read and manage the users of your
  * application. Your users stay in your database: the plugin answers signed
@@ -7,7 +7,7 @@
  *
  * ```ts
  * import { betterAuth } from "better-auth";
- * import { runqora } from "@runqora/sdk/better-auth";
+ * import { runqora } from "runqora/better-auth";
  *
  * export const auth = betterAuth({
  *   plugins: [runqora({ secret: process.env.RUNQORA_AUTH_SECRET! })],
