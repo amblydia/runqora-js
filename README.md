@@ -1,5 +1,13 @@
 # runqora
 
+> [!WARNING]
+> **This package is deprecated.** The hosted Runqora platform it connects to
+> was retired in October 2026, so this package no longer works. The repository
+> is archived and kept for reference.
+>
+> Runqora is now [Runqora UI](https://github.com/amblydia/runqora-ui), a shadcn
+> registry of components for SaaS apps. See [runqora.dev](https://runqora.dev).
+
 Everything your server needs to work with [Runqora](https://runqora.dev):
 verify the API keys your customers send, send and receive webhooks, report
 cron heartbeats, and let Runqora manage your application's users.
